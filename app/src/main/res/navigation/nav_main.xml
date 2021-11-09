@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/userListFragment">
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.usersmanageremaster.presentations.views.fragments.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_insertUserFragment"
+            app:destination="@id/insertUserFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/exit_left"
+            app:popEnterAnim="@anim/exit_right"
+            app:popExitAnim="@anim/slide_right"/>
+        <action
+            android:id="@+id/action_userListFragment_to_updateUserFragment"
+            app:destination="@id/updateUserFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/exit_left"
+            app:popEnterAnim="@anim/exit_right"
+            app:popExitAnim="@anim/slide_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/insertUserFragment"
+        android:name="com.example.usersmanageremaster.presentations.views.fragments.InsertUserFragment"
+        android:label="fragment_insert_user"
+        tools:layout="@layout/fragment_insert_user" >
+        <action
+            android:id="@+id/action_insertUserFragment_to_userListFragment"
+            app:destination="@id/userListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateUserFragment"
+        android:name="com.example.usersmanageremaster.presentations.views.fragments.UpdateUserFragment"
+        android:label="fragment_update_user"
+        tools:layout="@layout/fragment_update_user" >
+        <action
+            android:id="@+id/action_updateUserFragment_to_userListFragment"
+            app:destination="@id/userListFragment"
+            />
+    </fragment>
+</navigation>

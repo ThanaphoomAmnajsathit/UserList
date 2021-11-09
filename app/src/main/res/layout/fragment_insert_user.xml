@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".presentations.views.fragments.InsertUserFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_imageUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:cardCornerRadius="250dp"
+        android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView_userProfile"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:src="@drawable/uploadimg" />
+
+    </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/editText_firstName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_backgound"
+        android:hint="@string/first_name"
+        android:fontFamily="@font/kanit_light"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/editText_lastName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext_backgound"
+        android:hint="@string/last_name"
+        android:fontFamily="@font/kanit_light"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editText_email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_backgound"
+        android:gravity="center"
+        android:hint="@string/email"
+        android:fontFamily="@font/kanit_light"
+        android:padding="5dp"/>
+
+    <com.lamudi.phonefield.PhoneEditText
+        android:id="@+id/editText_phone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp">
+
+    </com.lamudi.phonefield.PhoneEditText>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginRight="3dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext_backgound"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/save"
+        android:textSize="18dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/kanit_semibold" />
+
+
+</LinearLayout>
